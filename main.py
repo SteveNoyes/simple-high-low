@@ -39,5 +39,16 @@ def main():
     # at the end of each round print out track record, and new line
     print("Your score is now", player_track_record, "\n")
 
+  # at the end of all rounds print out how the user did based on wins
+  # if they won all rounds
+  if(player_track_record == num_rounds):
+    print("Wow! You can really dance.")
+  # if they won at least half (rounded down)
+  elif(player_track_record >= int(num_rounds/2)):
+    print("Good job, you played well!")
+  # if they won less than half
+  elif(player_track_record < int(num_rounds/2)):
+    print("Better luck next time!")
+
 if __name__ == "__main__":
   main()
