@@ -22,11 +22,17 @@ def main():
     print("Your number is", player_random_number)
     print(player_guess)
 
-    # player wins if they guess correctly
+    # todo, add a counter for wins
 
-    if(player_random_number < computer_random_number):
-      print("winner")
-
+    # check if player was correct by saying lower
+    if(player_random_number < computer_random_number and player_guess == "lower"):
+      print("You were right! The computer's number was", computer_random_number)
+    # check if player was correct by saying higher
+    elif(player_random_number > computer_random_number and player_guess == "higher"):
+      print("You were right! The computer's number was", computer_random_number)
+    # if the above two and false than the play did not win
+    else:
+      print("That's incorrect. The computer's number was", computer_random_number)
 
 
 if __name__ == "__main__":
